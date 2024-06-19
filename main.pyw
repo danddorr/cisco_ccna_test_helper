@@ -8,7 +8,7 @@ file_answers = {}
 
 def on_release(key):
 
-    if key==Key.space:
+    if key==Key.space or key==Key.ctrl_r:
         with open("answer_log.json", "w+") as file:
             clipboard_content = get_clipboard_content()
             answers = get_answers(soup, clipboard_content)
